@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-ind2sub",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Convert a linear index to an array of subscripts.",
   "license": "Apache-2.0",
   "author": {
