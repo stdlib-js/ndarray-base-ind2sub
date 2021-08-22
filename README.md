@@ -386,6 +386,7 @@ int8_t stdlib_ndarray_ind2sub( int64_t ndims, int64_t *shape, int64_t *strides, 
 #include "stdlib/ndarray/orders.h"
 #include <stdint.h>
 #include <stdio.h>
+#include <inttypes.h>
 
 int main() {
     int64_t ndims = 2;
@@ -400,7 +401,7 @@ int main() {
     int i;
     printf( "subscripts = { " );
     for ( i = 0; i < ndims; i++ ) {
-        printf( "%lli", out[ i ] );
+        printf( "%"PRId64"", out[ i ] );
         if ( i < ndims-1 ) {
             printf( ", " );
         }
