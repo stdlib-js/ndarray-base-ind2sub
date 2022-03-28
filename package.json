@@ -42,6 +42,7 @@
     "@stdlib/math-base-special-trunc": "^0.0.x",
     "@stdlib/ndarray-index-modes": "^0.0.x",
     "@stdlib/ndarray-orders": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/types": "^0.0.x",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x",
     "@stdlib/utils-library-manifest": "^0.0.x"
