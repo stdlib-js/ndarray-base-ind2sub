@@ -1,0 +1,43 @@
+{
+  "name": "@stdlib/ndarray-base-ind2sub",
+  "version": "0.0.0",
+  "description": "Convert a linear index to an array of subscripts.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/ndarray-base-ind2sub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdtypes",
+    "types",
+    "base",
+    "ndarray",
+    "shape",
+    "strides",
+    "offset",
+    "multidimensional",
+    "array",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "sub2ind",
+    "ind2sub",
+    "subscript",
+    "subscripts",
+    "linear",
+    "index",
+    "idx",
+    "strided"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
