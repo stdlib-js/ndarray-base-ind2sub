@@ -3,8 +3,33 @@
   "version": "0.0.8",
   "description": "Convert a linear index to an array of subscripts.",
   "license": "Apache-2.0",
-  "type": "module",
-  "main": "./mod.js",
+  "author": {
+    "name": "The Stdlib Authors",
+    "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+  },
+  "contributors": [
+    {
+      "name": "The Stdlib Authors",
+      "url": "https://github.com/stdlib-js/stdlib/graphs/contributors"
+    }
+  ],
+  "main": "./lib",
+  "directories": {
+    "benchmark": "./benchmark",
+    "doc": "./docs",
+    "example": "./examples",
+    "include": "./include",
+    "lib": "./lib",
+    "src": "./src",
+    "test": "./test"
+  },
+  "types": "./docs/types",
+  "scripts": {
+    "test": "make test",
+    "test-cov": "make test-cov",
+    "examples": "make examples",
+    "benchmark": "make benchmark"
+  },
   "homepage": "https://stdlib.io",
   "repository": {
     "type": "git",
@@ -13,6 +38,46 @@
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
+  "dependencies": {
+    "@stdlib/math-base-special-trunc": "^0.0.8",
+    "@stdlib/ndarray-index-modes": "^0.0.8",
+    "@stdlib/ndarray-orders": "^0.0.8",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.2",
+    "@stdlib/types": "^0.0.14",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.7",
+    "@stdlib/utils-library-manifest": "^0.0.8"
+  },
+  "devDependencies": {
+    "@stdlib/array-uint8": "^0.0.7",
+    "@stdlib/assert-is-array": "^0.0.7",
+    "@stdlib/assert-is-nonnegative-integer-array": "^0.0.8",
+    "@stdlib/bench": "^0.0.12",
+    "@stdlib/math-base-special-abs": "^0.0.6",
+    "@stdlib/math-base-special-floor": "^0.0.8",
+    "@stdlib/ndarray-base-numel": "^0.0.8",
+    "@stdlib/ndarray-base-shape2strides": "^0.0.8",
+    "@stdlib/ndarray-base-strides2offset": "^0.0.8",
+    "@stdlib/random-base-discrete-uniform": "^0.0.6",
+    "@stdlib/random-base-randu": "^0.0.8",
+    "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
+    "istanbul": "^0.4.1",
+    "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">2.7.0"
+  },
+  "os": [
+    "aix",
+    "darwin",
+    "freebsd",
+    "linux",
+    "macos",
+    "openbsd",
+    "sunos",
+    "win32",
+    "windows"
+  ],
   "keywords": [
     "stdlib",
     "stdtypes",
@@ -37,6 +102,7 @@
     "idx",
     "strided"
   ],
+  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
