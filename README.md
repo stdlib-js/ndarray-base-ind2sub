@@ -45,20 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-ind2sub
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
+var ind2sub = require( '@stdlib/ndarray-base-ind2sub' );
 ```
 
 #### ind2sub( shape, strides, offset, order, idx, mode )
@@ -217,13 +227,13 @@ var bool = ( subscripts === out );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import shape2strides from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape2strides@deno/mod.js';
-import strides2offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@deno/mod.js';
-import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var shape2strides = require( '@stdlib/ndarray-base-shape2strides' );
+var strides2offset = require( '@stdlib/ndarray-base-strides2offset' );
+var numel = require( '@stdlib/ndarray-base-numel' );
+var randu = require( '@stdlib/random-base-randu' );
+var abs = require( '@stdlib/math-base-special-abs' );
+var ind2sub = require( '@stdlib/ndarray-base-ind2sub' );
 
 // Specify array characteristics:
 var shape = [ 3, 3, 3 ];
@@ -298,7 +308,124 @@ for ( i = 0; i < 20; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/ndarray/base/ind2sub.h"
+```
+
+<!-- lint disable maximum-heading-length -->
+
+#### stdlib_ndarray_ind2sub( ndims, \*shape, \*strides, offset, order, idx, mode, \*out )
+
+Computes the minimum and maximum linear indices in an underlying data buffer accessible to an array view.
+
+```c
+#include "stdlib/ndarray/index_modes.h"
+#include "stdlib/ndarray/orders.h"
+#include <stdint.h>
+
+int64_t ndims = 2;
+int64_t shape[] = { 3, 3 };
+int64_t strides[] = { -3, 1 };
+int64_t offset = 6;
+
+int64_t out[ 2 ];
+
+int8_t status = stdlib_ndarray_ind2sub( ndims, shape, strides, offset, STDLIB_NDARRAY_ROW_MAJOR, 7, STDLIB_NDARRAY_INDEX_ERROR, out );
+if ( status == -1 ) {
+    // Handle error...
+}
+```
+
+The function accepts the following arguments:
+
+-   **ndims**: `[in] int64_t` number of dimensions.
+-   **shape**: `[in] int64_t*` array shape (dimensions).
+-   **strides**: `[in] int64_t*` array strides.
+-   **offset**: `[in] int64_t` index offset.
+-   **order**: `[in] enum STDLIB_NDARRAY_ORDER` specifies whether an array is row-major (C-style) or column-major (Fortran-style).
+-   **idx**: `[in] int64_t` linear index in an array view.
+-   **mode**: `[in] enum STDLIB_NDARRAY_INDEX_MODE` specifies how to handle a linear index which exceeds array dimensions.
+-   **out**: `[out] int64_t*` output array.
+
+```c
+int8_t stdlib_ndarray_ind2sub( int64_t ndims, int64_t *shape, int64_t *strides, int64_t offset, enum STDLIB_NDARRAY_ORDER order, int64_t idx, enum STDLIB_NDARRAY_INDEX_MODE mode, int64_t *out );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/ndarray/base/ind2sub.h"
+#include "stdlib/ndarray/index_modes.h"
+#include "stdlib/ndarray/orders.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <inttypes.h>
+
+int main( void ) {
+    int64_t ndims = 2;
+    int64_t shape[] = { 3, 3 };
+    int64_t strides[] = { -3, 1 };
+    int64_t offset = 6;
+
+    int64_t out[ 2 ];
+
+    stdlib_ndarray_ind2sub( ndims, shape, strides, offset, STDLIB_NDARRAY_ROW_MAJOR, 7, STDLIB_NDARRAY_INDEX_ERROR, out );
+
+    int i;
+    printf( "subscripts = { " );
+    for ( i = 0; i < ndims; i++ ) {
+        printf( "%"PRId64"", out[ i ] );
+        if ( i < ndims-1 ) {
+            printf( ", " );
+        }
+    }
+    printf( " }\n" );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -325,7 +452,7 @@ for ( i = 0; i < 20; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -355,8 +482,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-base-ind2sub.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-base-ind2sub
 
-[test-image]: https://github.com/stdlib-js/ndarray-base-ind2sub/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-base-ind2sub/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/ndarray-base-ind2sub/actions/workflows/test.yml/badge.svg?branch=v0.1.1
+[test-url]: https://github.com/stdlib-js/ndarray-base-ind2sub/actions/workflows/test.yml?query=branch:v0.1.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-base-ind2sub/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-base-ind2sub?branch=main
