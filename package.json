@@ -52,7 +52,7 @@
     "@stdlib/assert-is-array": "^0.1.1",
     "@stdlib/assert-is-nonnegative-integer-array": "^0.1.0",
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/math-base-special-abs": "^0.1.0",
+    "@stdlib/math-base-special-abs": "^0.1.1",
     "@stdlib/math-base-special-floor": "^0.1.1",
     "@stdlib/ndarray-base-numel": "^0.1.1",
     "@stdlib/ndarray-base-shape2strides": "^0.1.1",
