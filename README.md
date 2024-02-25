@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
+import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-deno/mod.js';
 ```
 
 #### ind2sub( shape, strides, offset, order, idx, mode )
@@ -224,7 +224,7 @@ import strides2offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-s
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@deno/mod.js';
+import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-deno/mod.js';
 
 // Specify array characteristics:
 var shape = [ 3, 3, 3 ];
