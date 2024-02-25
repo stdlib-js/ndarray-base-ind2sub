@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@esm/index.mjs';
+import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-esm/index.mjs';
 ```
 
 #### ind2sub( shape, strides, offset, order, idx, mode )
@@ -229,7 +229,7 @@ import strides2offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-s
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
-import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@esm/index.mjs';
+import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ind2sub@v0.2.1-esm/index.mjs';
 
 // Specify array characteristics:
 var shape = [ 3, 3, 3 ];
