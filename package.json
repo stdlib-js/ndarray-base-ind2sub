@@ -39,7 +39,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-zeros": "^0.2.1",
+    "@stdlib/array-base-zeros": "^0.2.2",
     "@stdlib/math-base-special-trunc": "^0.2.2",
     "@stdlib/ndarray-index-modes": "^0.2.2",
     "@stdlib/ndarray-orders": "^0.2.2",
