@@ -41,6 +41,7 @@
   "dependencies": {
     "@stdlib/array-base-zeros": "^0.2.2",
     "@stdlib/math-base-special-trunc": "^0.2.2",
+    "@stdlib/ndarray-base-assert-is-column-major-string": "github:stdlib-js/ndarray-base-assert-is-column-major-string#main",
     "@stdlib/ndarray-index-modes": "^0.2.2",
     "@stdlib/ndarray-orders": "^0.2.2",
     "@stdlib/string-format": "^0.2.2",
