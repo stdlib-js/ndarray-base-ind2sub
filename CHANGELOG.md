@@ -24,6 +24,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`dd7b58d`](https://github.com/stdlib-js/stdlib/commit/dd7b58d5281732fc9ba4153d7f9bbc31a3766ed9) - **bench:** fix copy-paste mistake _(by Athan Reines)_
 -   [`8aea8a0`](https://github.com/stdlib-js/stdlib/commit/8aea8a04b6be1b2cb1ddc5dd15e76f4423a4f50b) - **chore:** fix C lint errors [(#7974)](https://github.com/stdlib-js/stdlib/pull/7974) _(by GeoDaoyu, Athan Reines)_
 -   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
 -   [`6eee151`](https://github.com/stdlib-js/stdlib/commit/6eee15199727d04e3757e66f38384e97b8a333da) - **style:** fix indentation in JSON files _(by Philipp Burckhardt)_
