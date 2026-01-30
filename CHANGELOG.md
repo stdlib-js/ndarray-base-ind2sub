@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-27)
+## Unreleased (2026-01-30)
 
 <section class="issues">
 
@@ -25,7 +25,7 @@ This release closes the following issue:
 <details>
 
 -   [`dd7b58d`](https://github.com/stdlib-js/stdlib/commit/dd7b58d5281732fc9ba4153d7f9bbc31a3766ed9) - **bench:** fix copy-paste mistake _(by Athan Reines)_
--   [`8aea8a0`](https://github.com/stdlib-js/stdlib/commit/8aea8a04b6be1b2cb1ddc5dd15e76f4423a4f50b) - **chore:** fix C lint errors [(#7974)](https://github.com/stdlib-js/stdlib/pull/7974) _(by GeoDaoyu, Athan Reines)_
+-   [`8aea8a0`](https://github.com/stdlib-js/stdlib/commit/8aea8a04b6be1b2cb1ddc5dd15e76f4423a4f50b) - **chore:** fix C lint errors [(#7974)](https://github.com/stdlib-js/stdlib/pull/7974) _(by Geo Daoyu, Athan Reines)_
 -   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
 -   [`6eee151`](https://github.com/stdlib-js/stdlib/commit/6eee15199727d04e3757e66f38384e97b8a333da) - **style:** fix indentation in JSON files _(by Philipp Burckhardt)_
 -   [`b1ed7bc`](https://github.com/stdlib-js/stdlib/commit/b1ed7bc33de9d21119087820e0002a8803d97203) - **refactor:** use base assertion utility _(by Athan Reines)_
@@ -43,7 +43,7 @@ This release closes the following issue:
 A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
--   GeoDaoyu
+-   Geo Daoyu
 -   Philipp Burckhardt
 
 </section>
