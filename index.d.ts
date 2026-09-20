@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,15 +16,12 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var zeros = require( '@stdlib/array-base-zeros' );
-var getSubscripts = require( './assign.js' );
-
-
-// MAIN //
+import { ArrayLike } from '@stdlib/types/array';
+import { Mode, Order } from '@stdlib/types/ndarray';
 
 /**
 * Converts a linear index to an array of subscripts.
@@ -108,14 +105,15 @@ var getSubscripts = require( './assign.js' );
 *
 *     In short, from the perspective of a view, view data is always ordered.
 *
-* @param {NonNegativeIntegerArray} shape - array shape
-* @param {IntegerArray} strides - stride array
-* @param {NonNegativeInteger} offset - location of the first indexed value **based** on the stride array
-* @param {string} order - specifies whether an array is row-major (C-style) or column-major (Fortran-style)
-* @param {integer} idx - linear index
-* @param {string} mode - specifies how to handle a linear index which exceeds array dimensions
-* @throws {RangeError} linear index must not exceed array dimensions
-* @returns {Array} subscripts
+*
+* @param shape - array shape
+* @param strides - stride array
+* @param offset - location of the first indexed value **based** on the stride array
+* @param order - specifies whether an array is row-major (C-style) or column-major (Fortran-style)
+* @param idx - linear index
+* @param mode - specifies how to handle a linear index which exceeds array dimensions
+* @throws linear index must not exceed array dimensions
+* @returns subscripts
 *
 * @example
 * var shape = [ 3, 3, 3 ];
@@ -126,11 +124,9 @@ var getSubscripts = require( './assign.js' );
 * var s = ind2sub( shape, strides, offset, order, 17, 'throw' );
 * // returns [ 1, 2, 2 ]
 */
-function ind2sub( shape, strides, offset, order, idx, mode ) {
-	return getSubscripts( shape, strides, offset, order, idx, mode, zeros( shape.length ) ); // eslint-disable-line max-len
-}
+declare function ind2sub( shape: ArrayLike<number>, strides: ArrayLike<number>, offset: number, order: Order, idx: number, mode: Mode ): Array<number>;
 
 
 // EXPORTS //
 
-module.exports = ind2sub;
+export = ind2sub;
